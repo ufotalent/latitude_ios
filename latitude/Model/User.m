@@ -1,15 +1,16 @@
 //
-//  ViewController.h
+//  User.m
 //  latitude
 //
 //  Created by ufotalent on 11/5/13.
 //  Copyright (c) 2013 413. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "User.h"
-@interface ViewController : UIViewController {
-    User* user;
-}
 
+@implementation User
+- (id)init {
+    self = [super init];
+    return nil;
+}
 @end

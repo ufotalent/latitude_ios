@@ -18,6 +18,10 @@
 		6901D6151828D513004C5BCF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6901D6141828D513004C5BCF /* Default-568h@2x.png */; };
 		6901D6181828D513004C5BCF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6901D6161828D513004C5BCF /* MainStoryboard.storyboard */; };
 		6901D61B1828D513004C5BCF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6901D61A1828D513004C5BCF /* ViewController.m */; };
+		6901D62518290B65004C5BCF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6901D62418290B65004C5BCF /* User.m */; };
+		6901D62A18290EE0004C5BCF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6901D62918290EE0004C5BCF /* LoginViewController.m */; };
+		6901D633182924C8004C5BCF /* tableViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6901D632182924C8004C5BCF /* tableViewBackground.png */; };
+		6901D63518292642004C5BCF /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6901D63418292642004C5BCF /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,12 @@
 		6901D6171828D513004C5BCF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		6901D6191828D513004C5BCF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6901D61A1828D513004C5BCF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6901D62318290B65004C5BCF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
+		6901D62418290B65004C5BCF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		6901D62818290EE0004C5BCF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controller/LoginViewController.h; sourceTree = "<group>"; };
+		6901D62918290EE0004C5BCF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controller/LoginViewController.m; sourceTree = "<group>"; };
+		6901D632182924C8004C5BCF /* tableViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tableViewBackground.png; path = Resources/tableViewBackground.png; sourceTree = "<group>"; };
+		6901D63418292642004C5BCF /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = Resources/background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,9 @@
 		6901D6041828D513004C5BCF /* latitude */ = {
 			isa = PBXGroup;
 			children = (
+				6901D631182923EA004C5BCF /* Resources */,
+				6901D62218290AF6004C5BCF /* Model */,
+				6901D621182909B1004C5BCF /* Controller */,
 				6901D60D1828D513004C5BCF /* AppDelegate.h */,
 				6901D60E1828D513004C5BCF /* AppDelegate.m */,
 				6901D6161828D513004C5BCF /* MainStoryboard.storyboard */,
@@ -105,6 +118,33 @@
 				6901D6141828D513004C5BCF /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6901D621182909B1004C5BCF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6901D62818290EE0004C5BCF /* LoginViewController.h */,
+				6901D62918290EE0004C5BCF /* LoginViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6901D62218290AF6004C5BCF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6901D62318290B65004C5BCF /* User.h */,
+				6901D62418290B65004C5BCF /* User.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6901D631182923EA004C5BCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6901D63418292642004C5BCF /* background.jpg */,
+				6901D632182924C8004C5BCF /* tableViewBackground.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +203,8 @@
 				6901D6131828D513004C5BCF /* Default@2x.png in Resources */,
 				6901D6151828D513004C5BCF /* Default-568h@2x.png in Resources */,
 				6901D6181828D513004C5BCF /* MainStoryboard.storyboard in Resources */,
+				6901D633182924C8004C5BCF /* tableViewBackground.png in Resources */,
+				6901D63518292642004C5BCF /* background.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +218,8 @@
 				6901D60B1828D513004C5BCF /* main.m in Sources */,
 				6901D60F1828D513004C5BCF /* AppDelegate.m in Sources */,
 				6901D61B1828D513004C5BCF /* ViewController.m in Sources */,
+				6901D62518290B65004C5BCF /* User.m in Sources */,
+				6901D62A18290EE0004C5BCF /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +342,7 @@
 				6901D6201828D513004C5BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
