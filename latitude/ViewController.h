@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "BMapKit.h"
 @interface ViewController : UIViewController {
     User* user;
+    BMKMapView *_mapView;
 }
 
 @end

@@ -9,7 +9,8 @@
 #import "ViewController.h"
 #import "User.h"
 #import "LoginViewController.h"
-@interface ViewController ()<LoginViewControllerDelegate>
+#import "BMapKit.h"
+@interface ViewController ()<LoginViewControllerDelegate,BMKMapViewDelegate>
 
 @end
 
@@ -26,7 +27,8 @@
     [button addTarget:self action:@selector(ButtonDidToch:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     */
-
+    _mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(50, 50, 220, 360)];
+    [self.view addSubview:_mapView];
     user = [[User alloc] init];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -39,7 +41,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     if (user == nil) {
-        [self performSegueWithIdentifier:@"MoveToRegister" sender:self];
+//        [self performSegueWithIdentifier:@"MoveToRegister" sender:self];
     }
 }
 - (void)didReceiveMemoryWarning {
@@ -50,5 +52,13 @@
     [self dismissViewControllerAnimated:TRUE completion:NULL];
 }
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    [_mapView viewWillAppear];
+    _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [_mapView viewWillDisappear];
+    _mapView.delegate = nil; // 不用时，置nil
+}
 @end
