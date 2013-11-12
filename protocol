@@ -1,0 +1,76 @@
+[user register]
+post: 
+/register
+    uid: string
+    pwd: md5 string
+
+response:
+{
+    "result": true/false,
+}
+
+
+
+
+[user login]
+post:
+/login
+    uid: string
+    pwd: md5 string
+
+response:
+{
+    "result": true/false,
+    "token": 64-byte hex string,
+}
+
+
+
+
+
+[upload location]
+post:
+/ul
+    token: 64-byte hex string
+    latitude: double
+    longitude: double
+    precision: double (in meters)
+    time: timestamp (int)
+
+response:
+{
+    "result": true/false
+}
+
+
+
+
+
+
+[get friends location]
+post:
+/g
+    token: 64-byte hex string
+
+response:
+{
+    "result" : true/false,
+    "locations" : [
+        {
+            "uid": string,
+            "time": timestamp (int)
+            "latitude": double
+            "longitude": double
+            "precision": double (in meters)
+        },
+        {
+            "uid": string,
+            "time": timestamp (int)
+            "latitude": double
+            "longitude": double
+            "precision": double (in meters)
+        }
+    ]
+}
+
+
